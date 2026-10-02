@@ -1,0 +1,14 @@
+{
+  "name": "KendinParket",
+  "short_name": "KendinParket",
+  "description": "Uygulama indirmeden otopark kapısını aç",
+  "lang": "tr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14201d",
+  "theme_color": "#14201d",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

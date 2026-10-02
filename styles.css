@@ -1,0 +1,43 @@
+:root{
+  --bg:#14201d; --panel:#1d2c27; --line:#3a4b43; --yazi:#f2f4eb;
+  --soluk:#b2beb5; --iyi:#b5d334; --kotu:#ffb3a6; --uyari:#ffd479;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--yazi);
+  font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;
+  display:flex;justify-content:center;padding:20px 16px 40px}
+.kutu{width:min(100%,430px)}
+h1{font-size:26px;margin:0}
+h2{font-size:15px;margin:0 0 6px;color:var(--soluk)}
+.alt{margin:2px 0 12px;color:var(--soluk)}
+label{display:block;margin:14px 0 6px;color:var(--soluk);font-size:14px}
+input{width:100%;min-height:48px;padding:10px 12px;font:inherit;color:#fff;
+  background:#101a18;border:1px solid #53665b;border-radius:8px}
+button{width:100%;min-height:50px;margin-top:16px;padding:10px 14px;font:inherit;
+  font-weight:700;border:0;border-radius:8px;background:var(--iyi);color:#17200c;
+  cursor:pointer}
+button:disabled{opacity:.55;cursor:not-allowed}
+button.ikincil{background:#2a3a34;color:var(--yazi);border:1px solid var(--line);
+  font-weight:600}
+section.bilgi{margin-top:26px;color:var(--soluk);font-size:14px}
+section.bilgi ol{padding-left:18px;margin:6px 0}
+section.bilgi li{margin:4px 0}
+code{background:#101a18;padding:1px 5px;border-radius:4px;color:#dfe7e0}
+.ince{font-size:13px}
+.rozet{display:inline-block;padding:3px 10px;border-radius:999px;font-size:13px;
+  background:#2a3a34;border:1px solid var(--line)}
+.rozet-iyi{color:var(--iyi);border-color:#4a5d24}
+.rozet-kotu{color:var(--kotu);border-color:#5d3a34}
+.durum{margin-top:18px;padding:16px;background:var(--panel);
+  border:1px solid var(--line);border-radius:10px}
+.durum-yazi{margin:0;font-size:18px;font-weight:700}
+.durum-ayrinti{margin:6px 0 0;color:var(--soluk);font-size:14px;min-height:20px}
+.durum.ok{border-color:#4a5d24}
+.durum.ok .durum-yazi{color:var(--iyi)}
+.durum.hata{border-color:#5d3a34}
+.durum.hata .durum-yazi{color:var(--kotu)}
+.durum.uyari{border-color:#5d5134}
+.durum.uyari .durum-yazi{color:var(--uyari)}
+.dugmeler{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.dugmeler button{margin-top:0}
+.gizli{display:none}

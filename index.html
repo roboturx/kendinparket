@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14201d">
+<title>KendinParket — Kapıyı Aç</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="kutu">
+  <header>
+    <h1>KendinParket</h1>
+    <p class="alt">Otopark kapısı — uygulama indirmeden aç</p>
+    <p id="ag" class="rozet rozet-?">ağ kontrol ediliyor</p>
+  </header>
+
+  <section>
+    <!-- QR ile gelindiginde kapı adı bu rozette gorunur; alan gizlenir (?gate=) -->
+    <p id="kapRozet" class="rozet rozet-?" hidden></p>
+
+    <div id="kapAlan">
+      <label for="gate">Kapı</label>
+      <input id="gate" value="GATE_01" autocomplete="off" spellcheck="false">
+    </div>
+
+    <label for="tutar">Ücret (TL)</label>
+    <input id="tutar" type="number" value="50" min="1" step="1">
+
+    <button id="btnOdeme">Öde ve kapıyı aç</button>
+    <button id="btnTest" class="ikincil" hidden>Test ödemesi yap</button>
+  </section>
+
+  <section id="durumKutu" class="durum gizli">
+    <p id="durum" class="durum-yazi">—</p>
+    <p id="ayrinti" class="durum-ayrinti"></p>
+    <div class="dugmeler">
+      <button id="btnYenile" class="ikincil" hidden>Yetkiyi yenile</button>
+      <button id="btnYerel" class="ikincil" hidden>Kapıyı yerel ağda aç</button>
+      <button id="btnTekrar" class="ikincil" hidden>Tekrar dene</button>
+    </div>
+  </section>
+
+  <section class="bilgi">
+    <h2>Nasıl çalışır?</h2>
+    <ol>
+      <li>Ödeme yapılır (kart bilgisi yalnız sağlayıcının sayfasında).</li>
+      <li>Backend kapıyı <b>çıkan</b> bağlantı üzerinden uyarır — kapı port açmaz.</li>
+      <li>İnternet yoksa <b>yerel ağ</b>: telefonu <code>kendinparket</code> ağına
+          bağlayın, “Kapıyı yerel ağda aç” düğmesine basın.</li>
+    </ol>
+    <p class="ince"><a href="#" id="lnkAyar">Sunucu adresi</a></p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
