@@ -85,6 +85,20 @@ Kurulum:
    **"Kapı: GATE_07"** görünmeli ve "Kapı" alanı gizlenmeli (2026-10-02'de
    yerel sunucuda doğrulandı).
 
+### QR üretimi
+
+```powershell
+C:\Python313\python.exe -m pip install --user qrcode     # saf Python, Pillow şart değil
+C:\Python313\python.exe tools\qr_uret.py "https://roboturx.github.io/kendinparket/?gate=GATE_01&ucret=50" pwa\qr_gate01.svg
+```
+
+- Çıktı **SVG** (vektör): 3 cm'den büyük boyutta da net basılır.
+- Örnek çıktı: `pwa/qr_gate01.svg` (sürüm 4, 33×33 modül, 62 karakter).
+- **Okunabilirlik gerçekten doğrulandı** (2026-10-02): SVG tarayıcıda
+  açıldı → ekran görüntüsü alındı → `zxing-cpp` dekoderi ile okundu →
+  adres birebir eşleşti. Kodu okutmadan önce kendi telefonunuzla bir kez
+  deneyin.
+
 ## Sürüm artışı ZORUNLU
 
 `sw.js` `KABUK` içindeki dosyalardan biri değiştiğinde **`SURUM` değerini artırın**:
